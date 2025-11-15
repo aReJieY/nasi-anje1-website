@@ -1,0 +1,761 @@
+@font-face {
+    font-family: 'Knewave';
+    src: url('fonts/Knewave-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrittanySignature';
+  src: url('fonts/BrittanySignature.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d0c40, #6a3093);
+    color: #ffffff; 
+}
+
+/* Style the Hero Section */
+.hero {
+    background-image: url('images/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    color: rgba(76, 5, 91, 0.877); 
+    
+    /* Use Flexbox to center the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero h1 {
+    font-family: 'Knewave', sans-serif;
+    font-size: 7rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the navigation buttons*/
+.nav-button {
+    background-color: #ffffff; 
+    color: #333; 
+    padding: 10px 20px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #f0f0f0; 
+}
+
+
+@media (max-width: 600px) {
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-button {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem; 
+    }
+}
+/*SECTION STYLES*/
+section {
+    padding: 60px 20px; 
+    text-align: center;
+    max-width: 1200px; 
+    margin: 0 auto;     
+}
+
+section h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/*About Us Section*/
+#about {
+    background-color: #f9f9f9; 
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 800px; 
+    margin: 0 auto 30px auto; 
+}
+
+#about img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*Menu Preview Section*/
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    margin-top: 40px;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+    text-align: left;
+}
+
+.menu-item img {
+    width: 95%;
+    height: 400px;
+    object-fit: cover; 
+}
+
+.menu-item h3 {
+    font-size: 1.3rem;
+    padding: 20px;
+    color: #333;
+}
+
+/*Call to Action Button*/
+.cta-button {
+    display: inline-block;
+    background-color: #45055d; 
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0553d;
+}
+/*ABOUT US PAGE STYLES*/
+.about-page {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: bottom;
+}
+
+.about-content {
+    flex: 1; 
+}
+
+.about-image {
+    flex: 1; 
+}
+
+.about-image img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+/*Menu Highlights Bar (on About page)*/
+.menu-highlights {
+    background-color: #f4f4f4;
+}
+
+.menu-preview-bar {
+    display: flex;
+    justify-content: space-around; 
+    gap: 20px;
+}
+
+.menu-preview-item {
+    flex: 1;
+    text-align: center;
+}
+
+.menu-preview-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.menu-preview-item h3 {
+    font-size: 1.1rem;
+    color: #050505;
+}
+
+
+/*MENU PAGE STYLES*/
+.menu-page {
+    text-align: center;
+}
+
+.menu-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.menu-card {
+    background: #ffffff;
+    border-radius: 17px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden; 
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.menu-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    padding: 15px 15px 5px 15px;
+    margin: 0;
+    color: #0a0909;
+}
+
+/*Menu Page Titles*/
+.menu-page h2 {
+    font-size: 3rem;  
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.menu-page p {
+    font-size: 1.5rem; 
+    color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+    /*About Page*/
+    .about-page {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    /*Menu Highlights Bar*/
+    .menu-preview-bar {
+        flex-direction: column; 
+        gap: 40px;
+    }
+}
+/*CONTACT PAGE STYLES*/
+
+.contact-page {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px; 
+}
+
+.contact-form-container {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-form-container h2 {
+    margin-top: 0;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; 
+}
+
+.submit-button {
+    background-color: #ff6347; 
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e0553d;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 15px;
+}
+
+
+.contact-info-container {
+    padding-top: 20px;
+}
+
+.location-list .location {
+    margin-bottom: 25px;
+}
+
+.location-list h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.location-list p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.social-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-info a {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 600;
+    color: #ff6347;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+}
+.social-info a:hover {
+    text-decoration: underline;
+}
+
+/*RESPONSIVE FIX (for Contact Page)*/
+@media (max-width: 900px) {
+    .contact-page {
+        
+        grid-template-columns: 1fr; 
+    }
+}
+/*SOCIAL ICON STYLES (Footer & Contact)*/
+
+.social-info a {
+    text-decoration: none;
+    margin: 0;
+}
+.social-info a:hover {
+    text-decoration: none;
+}
+
+
+.social-icons {
+    display: flex; 
+    gap: 20px;   
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 40px;   
+    height: 40px;  
+    
+    transition: opacity 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 0.7; 
+}
+
+/*HEADER STYLES (Logo & Nav)*/
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 20px 40px;             
+    background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*This styles the container for "Sumpah [logo] Tak Cari Lain"*/
+.header-logo {
+    display: flex;         
+    align-items: center;   
+    gap: 15px;             
+    margin-right: auto;
+}
+
+/*This styles the logo image*/
+.header-logo img {
+    width: 60px;   
+    height: auto;
+}
+
+/*This styles the text ("Sumpah" and "Tak Cari Lain")*/
+.header-logo span {
+    font-family: 'BrittanySignature', sans-serif; 
+    font-size: 2rem; 
+    color: #8A2BE2;  
+}
+
+/*NAVIGATION BUTTONS CODE */
+header nav {
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: flex-end; 
+    gap: 10px;               
+}
+.nav-button {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.nav-button:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        justify-content: center; 
+        width: 100%;             
+        margin-top: 15px;       
+    }
+}
+/*NEW CONTACT PAGE STYLES*/
+
+body.contact-page-body {
+    background: linear-gradient(135deg, #0d0c40, #6a3093);
+    color: #ffffff; 
+}
+
+.contact-page-body header nav a {
+    color: #010000; 
+    background-color: transparent;
+    border: 1px solid #040404; 
+    box-shadow: none;
+}
+
+.contact-page-body header nav a.active,
+.contact-page-body header nav a:hover {
+    background-color: #fff;
+    color: #333; 
+}
+
+
+.contact-title {
+    font-size: 3rem;
+    color: #FFA500; 
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.contact-main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.contact-form-container {
+    background-color: #FFD700; 
+    color: #000000; 
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.contact-form-container h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: left;
+}
+.contact-form-container .form-group label {
+    color: #000; 
+    font-weight: 600;
+}
+.contact-form-container .form-group input,
+.contact-form-container .form-group textarea {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    color: #000;
+}
+
+.contact-form-container .submit-button {
+    background-color: #000000; 
+    color: #ffffff;
+    width: 100%;
+    font-size: 1.2rem;
+    border: none;
+}
+.contact-form-container .submit-button:hover {
+    background-color: #333;
+}
+
+.contact-form-container .form-note {
+    font-size: 0.9rem;
+    color: #000; 
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contact-footer {
+    text-align: center;
+    padding: 40px 20px 60px 20px;
+}
+.contact-footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.contact-footer .social-icons img {
+    width: 50px;
+    height: 50px;
+}
+.contact-footer .footer-contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+/*BOOK A TABLE (LOCATIONS) SECTION*/
+.book-table-section {
+    background-color: #FFD700; 
+    color: #000000; 
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.book-table-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.locations-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.location-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase; /
+}
+
+.location-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/*ORDER NOW PAGE STYLES*/
+
+
+body.order-page-body {
+    background-color: #3f1a6b; 
+    color: #ffffff; 
+}
+
+.order-page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 40px 0;
+}
+
+.order-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*Two-Column Layout*/
+.order-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.order-form-column h2,
+.order-image-column h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/*The Form Styling*/
+.order-form-column .form-group {
+    margin-bottom: 20px;
+}
+
+.order-form-column label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+/*Style for text boxes, email, number, and dropdown*/
+.order-form-column input[type="text"],
+.order-form-column input[type="email"],
+.order-form-column input[type="number"],
+.order-form-column select {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+}
+
+/*Payment Radio Buttons*/
+.payment-options h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.payment-options label {
+    font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+}
+.payment-options input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #100f0f;
+}
+
+/*Confirm Button*/
+.confirm-button {
+    background-color: #dc620b; 
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.confirm-button:hover {
+    background-color: #a54506;
+}
+
+/*The Image Column*/
+.order-image-column img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+    .order-container {
+        grid-template-columns: 1fr; 
+    }
+}
+/*ORDER PAGE TEXT COLOR*/
+.order-form-column h2,
+.order-image-column h2,
+.order-form-column label,
+.payment-options h3,
+.payment-options label {
+    color: #ffffff !important; 
+}
+/*ORDER NOW BUTTON (Homepage)*/
+.cta-button {
+    display: inline-block;
+    background-color: #8A2BE2; 
+    color: #ffffff;           
+    padding: 12px 30px;
+    border-radius: 50px;      
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #701ab3; 
+}
+
+/*ORDER PAGE PRICE DISPLAY*/
+.total-price-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price-container h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+#display-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+}
